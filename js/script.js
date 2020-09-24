@@ -17,4 +17,18 @@
  */
 function addVideoStream(elementId){
     let streamDiv=document.createElement("div"); //create new div for every
+    streamDiv.id=elementId;                      // Assiging id to div
+    streamDiv.style.transform="rotateY(180)";    // Takes care of literal i
+    remoteContainer.appendChild(streamDiv);      // add new div container
 }
+
+/**
+ * @name removeVideoStream
+ * @param elementId is the name of the element that is to be removed into the DOM
+ * @description Helper function to remove the video stream from "remove-container";
+ */
+function removeVideoStream(elementId){
+    let remDiv = document.getElementById(elementId);
+    if(remDiv) remDiv.parentNode.removeChild(remDiv);
+}
+
